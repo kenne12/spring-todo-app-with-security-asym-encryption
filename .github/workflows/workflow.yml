@@ -122,7 +122,7 @@ jobs:
             rm docker-compose.dev.yml
             # Download docker-compose.dev.yml if it doesn't exist
             if [ ! -f docker-compose.dev.yml ]; then
-              curl -o docker-compose.dev.yml https://raw.githubusercontent.com/kenne12/spring-todo-app-with-security-asym-encryption/refs/heads/main/docker-compose.dev.yml
+              curl -o docker-compose.dev.yml https://raw.githubusercontent.com/kenne12/spring-todo-app-with-security-asym-encryption/refs/heads/main/docker-compose-dev.yml
             fi
             
             # Pull latest image
