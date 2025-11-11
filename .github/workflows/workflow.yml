@@ -3,9 +3,9 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
+#  pull_request:
+#    branches:
+#      - main
 env:
   APP_NAME: task-flows-app
 
@@ -24,7 +24,7 @@ jobs:
       - name: Setup JDK
         uses: actions/setup-java@v4
         with:
-          java-version: '17'
+          java-version: '21'
           distribution: 'corretto'
 
       - name: Cache Maven dependencies
@@ -53,7 +53,7 @@ jobs:
       - name: Setup JDK
         uses: actions/setup-java@v4
         with:
-          java-version: '17'
+          java-version: '21'
           distribution: 'corretto'
 
       - name: Cache Maven dependencies

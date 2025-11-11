@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.NonNull;
 import lombok.Setter;
 import lombok.ToString;
 import org.springframework.lang.Nullable;
@@ -21,7 +22,7 @@ public class ErrorResponse {
 
     private @Nullable String message;
 
-    private String code;
+    private @NonNull String code;
 
     private List<ValidationError> validationErrors;
 
@@ -32,7 +33,8 @@ public class ErrorResponse {
     @Builder
     @ToString
     public static class ValidationError {
-        private String field;
+
+        private @NonNull String field;
 
         private String code;
 
