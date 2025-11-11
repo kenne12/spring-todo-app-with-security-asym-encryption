@@ -1,0 +1,12 @@
+services:
+  postgres:
+    container_name: spring_sec_asymmetric_postgres
+    image: postgres:17.5
+    environment:
+      POSTGRES_USER: username
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: spring_app_db
+    volumes:
+      - './data/postgres:/var/lib/postgresql/data'
+    ports:
+      - "5437:5432"
