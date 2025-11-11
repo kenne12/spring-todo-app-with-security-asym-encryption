@@ -108,7 +108,7 @@ jobs:
           script: |
             # Navigate to app directory
             cd /opt/${{ env.APP_NAME }} || mkdir -p /opt/${{ env.APP_NAME }} && cd /opt/${{ env.APP_NAME }}
-            
+
             # Create .env file from secrets
             cat > .env << EOF
             DOCKER_USERNAME=${{ secrets.DOCKER_USERNAME }}
@@ -118,7 +118,7 @@ jobs:
             PG_DB_USERNAME=${{secrets.PG_DB_USERNAME}}
             PG_DB_PASSWORD=${{secrets.PG_DB_PASSWORD}}
             EOF
-            
+
             rm docker-compose.dev.yml
             # Download docker-compose.dev.yml if it doesn't exist
             if [ ! -f docker-compose.dev.yml ]; then
