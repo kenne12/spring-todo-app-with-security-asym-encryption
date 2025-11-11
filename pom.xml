@@ -10,7 +10,7 @@
     </parent>
     <groupId>org.kenne</groupId>
     <artifactId>spring-security-asymetric-encryption</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
     <name>spring-security-asymetric-encryption</name>
     <description>spring-security-asymetric-encryption</description>
     <url/>
