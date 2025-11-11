@@ -13,7 +13,7 @@ jobs:
   tests:
     env:
       TZ: Europe/Berlin
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     name: Tests
     steps:
       - name: Checkout code
@@ -42,7 +42,7 @@ jobs:
           ./mvnw clean test
 
   build-and-deploy:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     name: Build & Deploy
     needs: tests
     if: github.ref == 'refs/heads/main'
